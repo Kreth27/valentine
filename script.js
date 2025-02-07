@@ -19,13 +19,60 @@ function countdown() {
     }, 1000);
 }
 
+// Love Compatibility Calculator (Always 100%)
+function calculateLove() {
+    const name1 = document.getElementById("name1").value;
+    const name2 = document.getElementById("name2").value;
+    
+    if (name1 && name2) {
+        const compatibility = 100; // Always 100% compatibility
+        document.getElementById("love-result").innerHTML = `${name1} ❤️ ${name2} = ${compatibility}% Compatibility!`;
+    } else {
+        alert("Please enter both names!");
+    }
+}
+
+// Show Proposal Popup on Button Click
+document.getElementById("proposal-button").addEventListener("click", function () {
+    showProposal();
+});
+
+// Show Proposal Popup and Launch Confetti
 function showProposal() {
-    document.getElementById("proposal-popup").style.display = "block";
+    launchConfetti(); // Launch confetti animation
+    const popup = document.getElementById("proposal-popup");
+    popup.style.display = "block"; // Ensure the popup becomes visible
+    popup.classList.add("show"); // Optional: For smoother animations
 }
 
+// Close Proposal Popup (when user clicks "Yes!")
 function closePopup() {
-    document.getElementById("proposal-popup").style.display = "none";
+    const popup = document.getElementById("proposal-popup");
+    popup.style.display = "none"; // Hide the popup
+    popup.classList.remove("show"); // Optional: Remove animation class
 }
 
-// Call countdown function
+// Confetti Effect
+function launchConfetti() {
+    const duration = 5 * 1000;
+    const end = Date.now() + duration;
+    (function frame() {
+        confetti({
+            particleCount: 10,
+            angle: Math.random() * 360,
+            spread: 45,
+            origin: {
+                x: Math.random(),
+                y: Math.random()
+            },
+            colors: ['#ff007f', '#ff00b3', '#ff33cc', '#ff66ff']
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    })();
+}
+
+// Initialize Countdown Timer
 countdown();
