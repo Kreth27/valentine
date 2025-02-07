@@ -45,11 +45,15 @@ function showProposal() {
     popup.classList.add("show"); // Optional: For smoother animations
 }
 
-// Close Proposal Popup (when user clicks "Yes!")
+// Close Proposal Popup and Show the Confirmation Message
 function closePopup() {
     const popup = document.getElementById("proposal-popup");
     popup.style.display = "none"; // Hide the popup
     popup.classList.remove("show"); // Optional: Remove animation class
+
+    // Show the confirmation message
+    const confirmationMessage = document.getElementById("confirmation-message");
+    confirmationMessage.style.display = "block"; // Show the confirmation message
 }
 
 // Confetti Effect

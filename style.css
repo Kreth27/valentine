@@ -98,3 +98,12 @@ button:hover {
     color: #e94e77;
     margin-top: 10px;
 }
+
+#confirmation-message {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e94e77;
+    margin-top: 20px;
+    text-align: center;
+    display: none; /* Hidden by default */
+}
