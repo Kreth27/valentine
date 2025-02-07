@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="greeting">
+            <h1>Hey Irish Joy,</h1>
+            <p>I have something special for you...</p>
+        </div>
+        <div class="countdown">
+            <h2>Countdown to Valentine's Day:</h2>
+            <div id="countdown-timer"></div>
+        </div>
+        <div class="message">
+            <p>Let me ask you something...</p>
+        </div>
+        <div class="button-container">
+            <button onclick="showProposal()">Will you be my Valentine?</button>
+        </div>
+        <div id="proposal-popup" class="popup">
+            <p>❤️ Will you be my Valentine? ❤️</p>
+            <button onclick="closePopup()">Yes! 💖</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
