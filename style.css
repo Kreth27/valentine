@@ -1,6 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9e3e3;
+    background: url('https://your-image-url.com/romantic-background.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #6a2c68;
     display: flex;
     justify-content: center;
@@ -35,8 +36,9 @@ button:hover {
     background-color: #f26b8c;
 }
 
+/* Popup Animation */
 .popup {
-    display: none;
+    display: none;  /* Hidden by default */
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
@@ -46,7 +48,16 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
+
+/* Show the popup */
+.popup.show {
+    display: block;
+    opacity: 1;
+}
+
 
 #countdown-timer {
     font-size: 1.5rem;
@@ -62,4 +73,28 @@ button:hover {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+}
+
+/* Love Calculator */
+#love-calculator input {
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+#love-calculator button {
+    padding: 15px;
+    background-color: #6a2c68;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#love-result {
+    font-size: 1.2rem;
+    color: #e94e77;
+    margin-top: 10px;
 }
