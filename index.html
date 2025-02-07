@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Be My Valentine</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -12,23 +12,40 @@
             <h1>Hey Irish Joy,</h1>
             <p>I have something special for you...</p>
         </div>
+
+        <!-- Love Calculator -->
+        <div id="love-calculator">
+            <h2>Let’s see how compatible we are!</h2>
+            <input type="text" id="name1" placeholder="Your name">
+            <input type="text" id="name2" placeholder="Her name">
+            <button onclick="calculateLove()">Calculate Love Compatibility!</button>
+            <div id="love-result"></div>
+        </div>
+
+        <!-- Countdown Section -->
         <div class="countdown">
             <h2>Countdown to Valentine's Day:</h2>
             <div id="countdown-timer"></div>
         </div>
+
+        <!-- Proposal Button and Popup -->
         <div class="message">
             <p>Let me ask you something...</p>
         </div>
         <div class="button-container">
-            <button onclick="showProposal()">Will you be my Valentine?</button>
+            <button id="proposal-button">Will you be my Valentine?</button>
         </div>
         <div id="proposal-popup" class="popup">
             <p>❤️ Will you be my Valentine? ❤️</p>
             <button onclick="closePopup()">Yes! 💖</button>
         </div>
+
+        <!-- Confetti Container -->
+        <div id="confetti-container"></div>
     </div>
-    <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script src="script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
 </body>
 </html>
